@@ -1,7 +1,7 @@
-from ProgramExerciseRR import Grocery_listsRR
+from fancyshopRR import fancyRR
 
 
-def ItemListRR():
+def ItemRR():
     
     items = []
     
@@ -15,26 +15,26 @@ def ItemListRR():
         amount = float(input("Order Amount (in pounds): "))
         while (amount <= 0):
             amount = float(input("\nAmount must be greater than 0\n"))
-        item = Grocery_listsRR(name, amount)
+        item = fancyRR(name, amount)
         items.append(item)
         
     return items
 
-def DisplayItemListRR(items):
+def DisplayListRR(items):
     
     for item in items:
         print(item)
 
-def TotalCostOfItemsRR(items):
+def TotalcostofitemRR(items):
     total = 0.00
     for item in items:
-        total += item.calculatetotalcostRR()
+        total += item.CALCRR()
     return total
 
 def main():
     
-    items = ItemListRR()
-    DisplayItemListRR(items)
-    print("\nTotal cost of item selected: ", TotalCostOfItemsRR(items))
+    items = ItemRR()
+    DisplayListRR(items)
+    print("\nTotal cost of item selected: ", TotalcostofitemRR(items))
 
 main()       
